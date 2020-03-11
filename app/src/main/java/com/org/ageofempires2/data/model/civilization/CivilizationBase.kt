@@ -1,4 +1,9 @@
-/* 
+package com.org.ageofempires2.data.model.civilization
+
+import com.google.gson.annotations.SerializedName
+import com.org.ageofempires2.data.model.civilization.Civilizations
+
+/*
 Copyright (c) 2020 Kotlin Data Classes Generated from JSON powered by http://www.json2kotlin.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -10,14 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar */
 
 
-data class Civilizations (
+data class civilization_Base (
 
-	@SerializedName("id") val id : Int,
-	@SerializedName("name") val name : String,
-	@SerializedName("expansion") val expansion : String,
-	@SerializedName("army_type") val army_type : String,
-	@SerializedName("unique_unit") val unique_unit : List<String>,
-	@SerializedName("unique_tech") val unique_tech : List<String>,
-	@SerializedName("team_bonus") val team_bonus : String,
-	@SerializedName("civilization_bonus") val civilization_bonus : List<String>
+	@SerializedName("civilizations") val civilizations : List<Civilizations>
 )
