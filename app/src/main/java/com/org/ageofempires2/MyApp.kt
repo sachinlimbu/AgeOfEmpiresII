@@ -3,6 +3,7 @@ package com.org.ageofempires2
 import android.app.Application
 import com.org.ageofempires2.di.component.AppComponent
 import com.org.ageofempires2.di.component.DaggerAppComponent
+import com.org.ageofempires2.di.module.AoeRoomModule
 import com.org.ageofempires2.di.module.NetworkModule
 
 class MyApp : Application() {
@@ -13,6 +14,7 @@ class MyApp : Application() {
     fun component():AppComponent{
         return DaggerAppComponent.builder()
             .networkModule(NetworkModule())
+            .aoeRoomModule(AoeRoomModule(this.applicationContext))
             .build()
     }
 }
