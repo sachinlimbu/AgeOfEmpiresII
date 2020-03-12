@@ -8,7 +8,7 @@ import com.org.ageofempires2.MyApp
 import com.org.ageofempires2.R
 import com.org.ageofempires2.adapter.CivilizationAdapter
 import com.org.ageofempires2.di.component.DaggerSearchComponent
-import com.org.ageofempires2.di.module.Aoe2ViewModel
+import com.org.ageofempires2.di.module.Aoe2ViewModule
 import com.org.ageofempires2.viewModel.CivilizationsViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         DaggerSearchComponent.builder()
             .appComponent((application as MyApp).component())
-            .aoe2ViewModel(Aoe2ViewModel(this))
+            .aoe2ViewModule(Aoe2ViewModule(this))
             .build()
             .inject(this)
 

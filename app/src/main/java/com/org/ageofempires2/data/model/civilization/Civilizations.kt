@@ -1,9 +1,11 @@
 package com.org.ageofempires2.data.model.civilization
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 data class Civilizations (
-
+	@PrimaryKey
 	@SerializedName("id") val id : Int,
 	@SerializedName("name") val name : String,
 	@SerializedName("expansion") val expansion : String,
