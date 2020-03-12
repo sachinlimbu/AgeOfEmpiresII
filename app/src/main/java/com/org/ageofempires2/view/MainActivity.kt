@@ -9,7 +9,7 @@ import com.org.ageofempires2.R
 import com.org.ageofempires2.adapter.CivilizationAdapter
 import com.org.ageofempires2.di.component.DaggerSearchComponent
 import com.org.ageofempires2.di.module.Aoe2ViewModule
-import com.org.ageofempires2.viewModel.CivilizationsViewModel
+import com.org.ageofempires2.viewModel.civilization.CivilizationsViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 

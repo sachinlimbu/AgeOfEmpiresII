@@ -1,4 +1,4 @@
-package com.org.ageofempires2.viewModel
+package com.org.ageofempires2.viewModel.civilization
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

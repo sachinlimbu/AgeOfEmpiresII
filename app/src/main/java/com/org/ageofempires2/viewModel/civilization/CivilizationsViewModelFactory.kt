@@ -1,4 +1,4 @@
-package com.org.ageofempires2.viewModel
+package com.org.ageofempires2.viewModel.civilization
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -10,6 +10,7 @@ class CivilizationsViewModelFactory @Inject constructor(
     private val repository: RepoClientRepository):ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return CivilizationsViewModel(
-            repository) as T
+            repository
+        ) as T
     }
 }
