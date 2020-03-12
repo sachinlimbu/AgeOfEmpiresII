@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.org.ageofempires2.view.MainActivity
 import com.org.ageofempires2.data.network.RepoClient
 import com.org.ageofempires2.data.network.RepoClientRepository
-import com.org.ageofempires2.data.network.RepoImpl
+import com.org.ageofempires2.data.network.RepoImplemantation
 import com.org.ageofempires2.di.scope.ActivityScope
 import com.org.ageofempires2.viewModel.CivilizationsViewModel
 import com.org.ageofempires2.viewModel.CivilizationsViewModelFactory
@@ -12,8 +12,7 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-class Aoe2ViewModel(private val mainActivity: MainActivity){
-
+class Aoe2ViewModule(private val mainActivity: MainActivity){
 
     @Provides
     @ActivityScope
@@ -27,12 +26,10 @@ class Aoe2ViewModel(private val mainActivity: MainActivity){
         return ViewModelProvider(mainActivity,factory).get(CivilizationsViewModel::class.java)
     }
 
-
-
     @Provides
     @ActivityScope
     fun provideRepository(client:RepoClient):RepoClientRepository{
-        return RepoImpl(client)
+        return RepoImplemantation(client)
     }
 
 }
