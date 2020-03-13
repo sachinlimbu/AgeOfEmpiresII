@@ -10,9 +10,6 @@ import androidx.navigation.findNavController
 import com.org.ageofempires2.R
 import kotlinx.android.synthetic.main.fragment_main_base.*
 
-/**
- * A simple [Fragment] subclass.
- */
 class MainBaseFragment : Fragment() {
 
     override fun onCreateView(
@@ -27,25 +24,17 @@ class MainBaseFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btn_civilizations.setOnClickListener {
-            view?.let{
-                it.findNavController().navigate(R.id.action_mainBaseFragment_to_civilizationsFragment)
-            }
+            view.findNavController().navigate(R.id.action_mainBaseFragment_to_civilizationsFragment)
         }
 
         btn_structures.setOnClickListener {
-            view?.let {
-                it.findNavController().navigate(R.id.action_mainBaseFragment_to_structuresFragment)
-            }
+            view.findNavController().navigate(R.id.action_mainBaseFragment_to_structuresFragment)
         }
         btn_technologies.setOnClickListener {
-            view?.let{
-                it.findNavController().navigate(R.id.action_mainBaseFragment_to_technologiesFragment)
-            }
+            view.findNavController().navigate(R.id.action_mainBaseFragment_to_technologiesFragment)
         }
         btn_units.setOnClickListener {
-            view?.let {
-                it.findNavController().navigate(R.id.action_mainBaseFragment_to_unitsFragment)
-            }
+            view.findNavController().navigate(R.id.action_mainBaseFragment_to_unitsFragment)
         }
     }
 

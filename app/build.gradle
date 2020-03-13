@@ -86,4 +86,12 @@ dependencies {
     //Navigation Graph
     implementation "androidx.navigation:navigation-fragment-ktx:2.2.1"
     implementation "androidx.navigation:navigation-fragment-ktx:2.2.1"
+
+
+    // Test rule for LiveData
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    // Mockito
+    testImplementation "org.mockito:mockito-core:3.2.4"
+
 }
