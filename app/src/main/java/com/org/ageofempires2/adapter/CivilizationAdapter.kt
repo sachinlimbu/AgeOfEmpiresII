@@ -7,24 +7,31 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.org.ageofempires2.R
 import com.org.ageofempires2.data.model.aoe2Main.AoeMainBase
-import kotlinx.android.synthetic.main.listofcivilization.view.*
+import kotlinx.android.synthetic.main.civilizations_list_view.view.*
 
 class CivilizationAdapter(
-    private val AoeMainBase: AoeMainBase
+    private val aoeMainBase: AoeMainBase
 ): RecyclerView.Adapter<CivilizationAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.listofcivilization,parent,false))
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.civilizations_list_view,parent,false))
     }
     override fun getItemCount(): Int {
-        return AoeMainBase.civilizations.size
+        return aoeMainBase.civilizations.size
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.id.text = AoeMainBase.civilizations[position].id.toString()
-        holder.text.text = AoeMainBase.civilizations[position].name
+        holder.name.text = aoeMainBase.civilizations[position].name
+        holder.expansion.text = aoeMainBase.civilizations[position].expansion
+        holder.armytype.text = aoeMainBase.civilizations[position].army_type
+        holder.teamBonus.text = aoeMainBase.civilizations[position].team_bonus
+        holder.civilBonus.text = aoeMainBase.civilizations[position].civilization_bonus.toString()
     }
     class ViewHolder(view:View):RecyclerView.ViewHolder(view) {
-        var id: TextView = view.typicode_id
-        var text: TextView = view.typicode_title
+        var name: TextView = view.civilization_name
+        var expansion: TextView = view.civilization_expansion
+        var armytype:TextView = view.civilization_army_type
+        var teamBonus:TextView = view.civilization_team_bonus
+        var civilBonus:TextView = view.civilization_civilization_bonus
+
     }
 }

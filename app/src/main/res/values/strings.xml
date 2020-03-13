@@ -8,4 +8,10 @@
     <string name="technologies">Technologies</string>
     <string name="technology">Technology</string>
     <string name="units">Units</string>
+    <string name="civil_name">Civilization Name</string>
+    <string name="structures_name">Structures Name</string>
+    <string name="struct_exp">Structures Expansion</string>
+    <string name="struct_age">Structures Age</string>
+    <string name="stuct_wood_cost">Structures Wood Cost</string>
+    <string name="hitpoint">Hotpoint Id</string>
 </resources>

@@ -17,23 +17,24 @@ import com.org.ageofempires2.data.model.aoe2Main.AoeMainBase
     StructuresConverter::class,
     TechnologiesConverter::class,
     UnitsConverter::class)
-abstract class AoeDatabase :RoomDatabase(){
+abstract class AoeDatabase2 :RoomDatabase(){
 
     abstract fun getAoeDao():AoeDao
 
     companion object{
         @Volatile
-        private var INSTANCE:AoeDatabase ? = null
+        private var INSTANCE: AoeDatabase2? = null
 
-        fun getInstance(context: Context):AoeDatabase{
+        fun getInstance(context: Context): AoeDatabase2 {
             synchronized(this){
-                var instance = INSTANCE
+                var instance =
+                    INSTANCE
 
                 if(instance == null){
                     instance = Room.databaseBuilder(
                         context.applicationContext,
-                        AoeDatabase::class.java,
-                    "AOEMAIN_db1"
+                        AoeDatabase2::class.java,
+                    "AOEMAIN_db2"
                     ).fallbackToDestructiveMigration().build()
                 }
                 return instance

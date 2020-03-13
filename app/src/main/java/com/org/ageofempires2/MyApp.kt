@@ -14,7 +14,7 @@ class MyApp : Application() {
     fun component():AppComponent{
         return DaggerAppComponent.builder()
             .networkModule(NetworkModule())
-            .aoeRoomModule(AoeRoomModule(this.applicationContext))
+            .aoeRoomModule(AoeRoomModule(this))
             .build()
     }
 }
